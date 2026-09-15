@@ -6,6 +6,23 @@ import { useLanguage } from "@/context/LanguageContext";
 import { siteConfig, getWhatsAppLink } from "@/data/siteConfig";
 import { ArrowDown, ArrowRight, ArrowUpRight, Star } from "lucide-react";
 
+function renderClearText(text: string) {
+  if (!text || !text.includes("J")) return text;
+  return text.split(/(J)/g).map((part, idx) =>
+    part === "J" ? (
+      <span
+        key={idx}
+        className="inline-block"
+        style={{ fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: "normal" }}
+      >
+        J
+      </span>
+    ) : (
+      part
+    )
+  );
+}
+
 export default function HeroSection() {
   const { t, lang } = useLanguage();
 
@@ -55,7 +72,7 @@ export default function HeroSection() {
           className="font-editorial text-[#F7F3F1] leading-[1.06] tracking-tight max-w-4xl"
           style={{ fontSize: "clamp(2.2rem, 5.5vw, 4.5rem)" }}
         >
-          <span className="block font-light text-[#F7F3F1]/95">{t.hero.line1}</span>
+          <span className="block font-light text-[#F7F3F1]/95">{renderClearText(t.hero.line1)}</span>
           <span className="block mt-1 sm:mt-2">
             <span className="text-[#F7F3F1]">{t.hero.line2} </span>
             <span className="italic font-light text-[#E98B98]">{t.hero.accent}</span>

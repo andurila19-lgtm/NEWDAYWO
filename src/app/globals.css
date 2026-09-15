@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'ClearSerifJ';
+  src: local('Georgia'), local('Times New Roman'), serif;
+  unicode-range: U+004A;
+}
+
 @theme {
   --color-brand-dark: #0D0C0D;
   --color-brand-dark-card: #191719;
@@ -8,7 +14,7 @@
   --color-brand-ivory: #F7F3F1;
   --color-brand-taupe: #B7AAA9;
 
-  --font-serif: var(--font-cormorant), Georgia, serif;
+  --font-serif: 'ClearSerifJ', var(--font-cormorant), Georgia, serif;
   --font-sans: var(--font-jakarta), system-ui, sans-serif;
 }
 
@@ -55,7 +61,7 @@ body {
 }
 
 .font-editorial {
-  font-family: var(--font-cormorant), Georgia, serif;
+  font-family: 'ClearSerifJ', var(--font-cormorant), Georgia, serif;
 }
 
 /* Hide scrollbar for tabs and horizontal scroll containers */

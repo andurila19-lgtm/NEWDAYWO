@@ -6,6 +6,23 @@ import { useLanguage } from "@/context/LanguageContext";
 import { getWhatsAppLink } from "@/data/siteConfig";
 import { ArrowRight, MessageCircle } from "lucide-react";
 
+function renderClearText(text: string) {
+  if (!text || !text.includes("J")) return text;
+  return text.split(/(J)/g).map((part, idx) =>
+    part === "J" ? (
+      <span
+        key={idx}
+        className="inline-block"
+        style={{ fontFamily: "Georgia, 'Times New Roman', serif", fontWeight: "normal" }}
+      >
+        J
+      </span>
+    ) : (
+      part
+    )
+  );
+}
+
 export default function FinalCtaSection() {
   const { t, lang } = useLanguage();
 
@@ -35,7 +52,7 @@ export default function FinalCtaSection() {
           className="font-editorial font-normal leading-[1.05] text-[#F7F3F1] tracking-tight mb-4 sm:mb-6"
           style={{ fontSize: "clamp(2.2rem, 7vw, 5rem)" }}
         >
-          {t.finalCta.title1}
+          {renderClearText(t.finalCta.title1)}
           <br />
           <span className="italic text-[#E98B98]">{t.finalCta.titleAccent}</span> {t.finalCta.titleRest}
         </h2>
