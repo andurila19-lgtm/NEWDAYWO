@@ -1,0 +1,408 @@
+export type Language = "id" | "en";
+
+export const translations = {
+  id: {
+    nav: {
+      home: "BERANDA",
+      about: "TENTANG",
+      services: "LAYANAN",
+      packages: "PAKET",
+      portfolio: "PORTOFOLIO",
+      gallery: "GALERI",
+      faq: "FAQ",
+      contact: "KONTAK",
+      consultation: "KONSULTASI",
+      attire: "BUSANA",
+      exploreGallery: "NEW DAY GALLERY",
+      consultViaWa: "KONSULTASI VIA WHATSAPP",
+    },
+    hero: {
+      location: "YOGYAKARTA",
+      role: "WEDDING ORGANIZER & WEDDING PLANNING",
+      line1: "JADIKAN MOMENT PERNIKAHANMU",
+      line2: "INDAH DAN",
+      accent: "TAK TERLUPAKAN.",
+      rest: "",
+      description:
+        "New Day membantu pasangan dalam mempersiapkan dan mengoordinasikan kebutuhan pernikahan agar setiap rangkaian acara dapat berjalan lebih terarah, tenang, dan lancar.",
+      ctaPrimary: "KONSULTASI VIA WHATSAPP",
+      ctaSecondary: "LIHAT PORTFOLIO",
+      scroll: "GULIR UNTUK EKSPLORASI",
+      googleBadge: "5,0 ★★★★★ di Google Business (26 Ulasan)",
+    },
+    intro: {
+      eyebrow: "TENTANG NEW DAY",
+      titleLine1: "PARTNER PERJALANAN",
+      titleLine2: "HARI BAHAGIA",
+      titleAccent: "ANDA.",
+      p1: "New Day Wedding Organizer merupakan Wedding Organizer dan Wedding Planner yang berbasis di Yogyakarta.",
+      p2: "New Day bukan sekadar membantu pada hari pernikahan, tetapi menjadi partner bagi pasangan dalam mempersiapkan dan mengoordinasikan momen penting mereka.",
+      p3: "Kami berfokus pada pengalaman pernikahan yang indah, personal, terorganisir, dan berkesan bagi pasangan, sehingga Anda dapat menikmati setiap momen dengan penuh ketenangan.",
+      tag1: "WEDDING ORGANIZER",
+      tag2: "WEDDING PLANNING",
+      tag3: "KOORDINASI PERSONAL",
+      cta: "KENAL LEBIH DEKAT",
+      imageLabel: "NEW DAY WEDDING ORGANIZER",
+      imageCity: "YOGYAKARTA",
+    },
+    services: {
+      eyebrow: "LAYANAN KAMI",
+      title1: "MENDAMPINGI DENGAN PERHATIAN,",
+      title2: "MEWUJUDKAN DENGAN",
+      titleAccent: "TERORGANISIR.",
+      description:
+        "Dari perencanaan konsep, koordinasi vendor, hingga pelaksanaan hari H, New Day hadir memastikan perayaan Anda berlangsung selaras dan berkesan.",
+      viewAll: "LIHAT SELURUH LAYANAN",
+      note: "Koordinasi vendor mencakup rekanan dekorasi, katering, MUA, fotografi, videografi, musik/entertainment, MC, wedding car, hingga souvenir sesuai kebutuhan Anda.",
+      items: [
+        {
+          number: "01",
+          title: "Wedding Organizer",
+          desc: "Pengorganisasian dan pengawasan jalannya acara di hari H secara cermat agar seluruh agenda berlangsung lancar dan tenang.",
+        },
+        {
+          number: "02",
+          title: "Wedding Planning",
+          desc: "Pendampingan persiapan pernikahan dari perumusan konsep, perencanaan alur acara, hingga alokasi waktu yang terarah.",
+        },
+        {
+          number: "03",
+          title: "Koordinasi Vendor & Acara",
+          desc: "Penyelarasan teknis dan komunikasi antara vendor, pengisi acara, dan keluarga besar agar seirama dalam satu visi.",
+        },
+        {
+          number: "04",
+          title: "Pernikahan Adat & Modern",
+          desc: "Pendampingan prosesi sakral adat maupun konsep resepsi modern dengan menghormati nilai tradisi dan keanggunan.",
+        },
+        {
+          number: "05",
+          title: "Persiapan & Pelaksanaan Acara",
+          desc: "Membantu pasangan menyusun detail teknis dari technical meeting hingga gladi resik menuju hari bahagia.",
+        },
+        {
+          number: "06",
+          title: "Sinergi New Day Gallery",
+          desc: "Terhubung langsung dengan New Day Gallery untuk konsultasi dan fitting busana pernikahan istimewa Anda.",
+        },
+      ],
+    },
+    featured: {
+      eyebrow: "PORTOFOLIO TERPILIH",
+      city: "YOGYAKARTA",
+      tag: "DOKUMENTASI KARYA",
+      title: "KEANGGUNAN MOMEN PERNIKAHAN DI YOGYAKARTA",
+      description:
+        "Momen-momen berharga yang terkoordinasi dengan hangat, indah, dan penuh rasa syukur bersama keluarga tercinta.",
+      cta: "LIHAT SEMUA PORTFOLIO",
+    },
+    packages: {
+      eyebrow: "PILIHAN PENDAMPINGAN",
+      titleLine1: "LAYANAN YANG",
+      titleLine2: "SESUAI DENGAN",
+      titleAccent: "KEBUTUHAN ANDA.",
+      description:
+        "Setiap pernikahan memiliki kebutuhan yang unik. Diskusikan rencana Anda bersama kami untuk mendapatkan skema koordinasi yang paling tepat.",
+      scopeTitle: "Cakupan Koordinasi:",
+      ctaButton: "KONSULTASI SKEMA INI",
+      notSure: "Ingin mendiskusikan kebutuhan khusus pernikahan Anda?",
+      letsTalk: "KONSULTASI VIA WHATSAPP",
+    },
+    why: {
+      eyebrow: "NILAI & KARAKTER KAMI",
+      line1: "HANGAT.",
+      line2: "ELEGAN.",
+      line3: "TERORGANISIR DENGAN",
+      accent: "PENUH PERHATIAN.",
+      pillars: [
+        {
+          number: "01",
+          title: "PENDEKATAN PERSONAL & HANGAT",
+          desc: "Menjadi partner yang mendengarkan setiap harapan dan impian pernikahan Anda secara terbuka dan bersahabat.",
+          extended:
+            "Kami percaya setiap pasangan memiliki cerita berbeda, sehingga setiap pendekatan selalu dirancang unik dan personal.",
+        },
+        {
+          number: "02",
+          title: "PROFESIONAL & TERORGANISIR",
+          desc: "Manajemen alur acara dan koordinasi vendor yang terstruktur agar hari pernikahan berjalan lebih terarah dan tenang.",
+          extended:
+            "Menjaga ritme acara dari persiapan hingga selesai tanpa membebani pasangan dan keluarga inti.",
+        },
+        {
+          number: "03",
+          title: "ATTENTION TO DETAIL",
+          desc: "Perhatian mendalam pada setiap elemen penting, mulai dari kenyamanan keluarga hingga kesiapan prosesi sakral.",
+          extended:
+            "Setiap transisi, jadwal, dan kesiapan teknis dipantau dengan cermat demi kenyamanan semua pihak.",
+        },
+        {
+          number: "04",
+          title: "EKOSISTEM TERPADU",
+          desc: "Didukung lini New Day Gallery untuk melengkapi kebutuhan busana pernikahan di Yogyakarta.",
+          extended:
+            "Kemudahan koordinasi antara penataan acara dan kesiapan busana pengantin dalam satu ekosistem terpercaya.",
+        },
+      ],
+    },
+    galleryTeaser: {
+      badge: "LINI TERKAIT NEW DAY",
+      title: "NEW DAY",
+      titleAccent: "GALLERY.",
+      tagline: "Your special attire for your special day.",
+      sub: "WEDDING ATTIRE • YOGYAKARTA",
+      cta: "LIHAT NEW DAY GALLERY",
+      ecosystem: "Lini busana pernikahan yang merupakan bagian dari New Day Wedding Organizer",
+    },
+    masonry: {
+      eyebrow: "DOKUMENTASI VISUAL",
+      title: "MOMEN INDAH YANG TERABADIKAN.",
+      tabs: {
+        all: "SEMUA",
+        ceremony: "PROSESI SAKRAL",
+        reception: "RESEPSI",
+        details: "DETAIL & DEKORASI",
+        attire: "BUSANA PENGANTIN",
+      },
+    },
+    testimonials: {
+      eyebrow: "ULASAN GOOGLE BUSINESS",
+      title: "RATING 5,0 DARI 26 ULASAN DI GOOGLE.",
+      subtitle:
+        "New Day berfokus pada pengalaman pernikahan yang indah, personal, terorganisir, dan berkesan bagi pasangan.",
+      quote:
+        "Jadikan moment pernikahanmu indah dan tak terlupakan bersama New Day Wedding Organizer.",
+      googleNote:
+        "Terdaftar resmi di Google Business dengan ulasan sempurna bintang 5,0. Kami selalu berkomitmen memberikan pendampingan terbaik untuk hari bahagia Anda.",
+      actionLabel: "KONSULTASI VIA WHATSAPP",
+    },
+    faq: {
+      eyebrow: "PERTANYAAN UMUM",
+      title1: "INFORMASI &",
+      titleAccent: "TANYA JAWAB.",
+    },
+    finalCta: {
+      eyebrow: "HUBUNGI KAMI",
+      title1: "WUKUDKAN MOMEN",
+      titleAccent: "PERNIKAHAN IMPIAN",
+      titleRest: "BERSAMA KAMI.",
+      desc1: "Mari diskusikan konsep, tanggal, dan rencana pernikahan Anda.",
+      desc2: "Tim New Day Wedding Organizer siap mendampingi dengan hangat dan profesional.",
+      ctaPrimary: "KONSULTASI VIA WHATSAPP",
+      ctaSecondary: "LIHAT PORTFOLIO",
+    },
+    footer: {
+      desc: "New Day Wedding Organizer merupakan Wedding Organizer dan Wedding Planner berbasis di Yogyakarta, membantu pasangan mewujudkan momen pernikahan yang indah, personal, dan terorganisir.",
+      location: "Yogyakarta, Indonesia",
+      navTitle: "NAVIGASI",
+      relatedTitle: "NEW DAY GALLERY",
+      galleryDesc: "Kebutuhan busana pernikahan istimewa untuk hari bahagia Anda di Yogyakarta. Jl. Bugisan 335P, Yogyakarta (09.30–16.30).",
+      exploreGallery: "LIHAT NEW DAY GALLERY",
+      socialTitle: "Yogyakarta Wedding Organizer & Planner",
+      rights: "Hak cipta dilindungi.",
+      motto: "Jadikan Moment Pernikahanmu Indah dan Tak Terlupakan",
+    },
+  },
+  en: {
+    nav: {
+      home: "HOME",
+      about: "ABOUT",
+      services: "SERVICES",
+      packages: "PACKAGES",
+      portfolio: "PORTFOLIO",
+      gallery: "GALLERY",
+      faq: "FAQ",
+      contact: "CONTACT",
+      consultation: "CONSULTATION",
+      attire: "ATTIRE",
+      exploreGallery: "NEW DAY GALLERY",
+      consultViaWa: "CONSULT VIA WHATSAPP",
+    },
+    hero: {
+      location: "YOGYAKARTA",
+      role: "WEDDING ORGANIZER & WEDDING PLANNING",
+      line1: "MAKE YOUR WEDDING MOMENT",
+      line2: "BEAUTIFUL AND",
+      accent: "UNFORGETTABLE.",
+      rest: "",
+      description:
+        "New Day guides couples in preparing and coordinating every wedding detail so your celebration flows smoothly, gracefully, and seamlessly.",
+      ctaPrimary: "CONSULT VIA WHATSAPP",
+      ctaSecondary: "VIEW PORTFOLIO",
+      scroll: "SCROLL TO EXPLORE",
+      googleBadge: "5.0 ★★★★★ on Google Business (26 Reviews)",
+    },
+    intro: {
+      eyebrow: "ABOUT NEW DAY",
+      titleLine1: "YOUR TRUSTED",
+      titleLine2: "WEDDING PLANNING",
+      titleAccent: "PARTNER.",
+      p1: "New Day Wedding Organizer is a dedicated Wedding Organizer and Wedding Planner based in Yogyakarta.",
+      p2: "New Day is not merely present on the wedding day, but serves as a collaborative partner in preparing and coordinating your most meaningful celebration.",
+      p3: "We focus on creating wedding experiences that are beautiful, personal, organized, and truly memorable for every couple.",
+      tag1: "WEDDING ORGANIZER",
+      tag2: "WEDDING PLANNING",
+      tag3: "PERSONAL COORDINATION",
+      cta: "LEARN MORE",
+      imageLabel: "NEW DAY WEDDING ORGANIZER",
+      imageCity: "YOGYAKARTA",
+    },
+    services: {
+      eyebrow: "OUR SERVICES",
+      title1: "PLANNED WITH CARE,",
+      title2: "COORDINATED WITH",
+      titleAccent: "INTENTION.",
+      description:
+        "From conceptual vision and vendor alignment to on-the-day execution, New Day ensures your wedding journey is harmonious and worry-free.",
+      viewAll: "VIEW ALL SERVICES",
+      note: "Vendor coordination spans decor, catering, MUA, photography, videography, entertainment/music, MC, wedding car, and favors tailored to your preferences.",
+      items: [
+        {
+          number: "01",
+          title: "Wedding Organizer",
+          desc: "Thorough on-the-day event management to guarantee your celebration unfolds smoothly and serenely.",
+        },
+        {
+          number: "02",
+          title: "Wedding Planning",
+          desc: "End-to-end guidance from initial concept formulation, timeline structuring, to thoughtful budget allocation.",
+        },
+        {
+          number: "03",
+          title: "Vendor & Event Coordination",
+          desc: "Synchronizing technical communication between vendors, performers, and families for unified harmony.",
+        },
+        {
+          number: "04",
+          title: "Traditional & Modern Weddings",
+          desc: "Guiding sacred cultural ceremonies and contemporary celebrations with deep respect for heritage.",
+        },
+        {
+          number: "05",
+          title: "Preparation & Execution",
+          desc: "Facilitating technical meetings, rehearsals, and detailed timelines leading up to the celebration.",
+        },
+        {
+          number: "06",
+          title: "New Day Gallery Synergy",
+          desc: "Directly connected with New Day Gallery for tailored wedding attire consultations and private fittings.",
+        },
+      ],
+    },
+    featured: {
+      eyebrow: "FEATURED WORK",
+      city: "YOGYAKARTA",
+      tag: "PORTFOLIO HIGHLIGHT",
+      title: "TIMELESS WEDDING CELEBRATIONS IN YOGYAKARTA",
+      description:
+        "Precious celebrations organized with warmth, elegance, and peace of mind for couples and their loved ones.",
+      cta: "VIEW ALL PORTFOLIO",
+    },
+    packages: {
+      eyebrow: "COLLABORATION OPTIONS",
+      titleLine1: "COORDINATION TAILORED",
+      titleLine2: "TO YOUR",
+      titleAccent: "NEEDS.",
+      description:
+        "Every wedding celebration is distinct. Consult with our team to explore the coordination structure that fits your aspirations best.",
+      scopeTitle: "Coordination Scope:",
+      ctaButton: "DISCUSS THIS OPTION",
+      notSure: "Looking for customized planning support?",
+      letsTalk: "CONSULT VIA WHATSAPP",
+    },
+    why: {
+      eyebrow: "BRAND CHARACTER",
+      line1: "WARM.",
+      line2: "ELEGANT.",
+      line3: "ORGANIZED WITH",
+      accent: "THOUGHTFUL DETAIL.",
+      pillars: [
+        {
+          number: "01",
+          title: "PERSONAL & APPROACHABLE",
+          desc: "Serving as a compassionate partner who genuinely listens to your wedding aspirations.",
+          extended:
+            "We believe every couple has a unique narrative, approaching every plan with bespoke warmth and attentive care.",
+        },
+        {
+          number: "02",
+          title: "PROFESSIONAL & ORGANIZED",
+          desc: "Structured rundown management and unified vendor coordination for a calm celebration.",
+          extended:
+            "Managing every moving part seamlessly behind the scenes so couples and parents stay fully present.",
+        },
+        {
+          number: "03",
+          title: "ATTENTION TO DETAIL",
+          desc: "Deep focus on nuance, from guest comfort to the sacred solemnity of cultural ceremonies.",
+          extended:
+            "Timing, logistics, and visual cohesion are diligently overseen to maintain peace of mind.",
+        },
+        {
+          number: "04",
+          title: "INTEGRATED ECOSYSTEM",
+          desc: "Supported by New Day Gallery to fulfill bespoke wedding attire needs in Yogyakarta.",
+          extended:
+            "Seamless harmony between event coordination and attire preparation within one trusted ecosystem.",
+        },
+      ],
+    },
+    galleryTeaser: {
+      badge: "NEW DAY ECOSYSTEM",
+      title: "NEW DAY",
+      titleAccent: "GALLERY.",
+      tagline: "Your special attire for your special day.",
+      sub: "WEDDING ATTIRE • YOGYAKARTA",
+      cta: "EXPLORE NEW DAY GALLERY",
+      ecosystem: "Wedding attire division part of New Day Wedding Organizer",
+    },
+    masonry: {
+      eyebrow: "VISUAL ARCHIVE",
+      title: "BEAUTIFUL MOMENTS CAPTURED.",
+      tabs: {
+        all: "ALL",
+        ceremony: "CEREMONY",
+        reception: "RECEPTION",
+        details: "DETAILS & DECOR",
+        attire: "BRIDAL ATTIRE",
+      },
+    },
+    testimonials: {
+      eyebrow: "GOOGLE BUSINESS REVIEWS",
+      title: "RATING 5.0 FROM 26 REVIEWS ON GOOGLE.",
+      subtitle:
+        "New Day focuses on delivering wedding experiences that are beautiful, personal, organized, and memorable.",
+      quote:
+        "Make your wedding moment beautiful and unforgettable with New Day Wedding Organizer.",
+      googleNote:
+        "Officially listed on Google Business with a pristine 5.0 star rating. We are dedicated to providing heartfelt coordination for your special day.",
+      actionLabel: "CONSULT VIA WHATSAPP",
+    },
+    faq: {
+      eyebrow: "FREQUENTLY ASKED",
+      title1: "QUESTIONS &",
+      titleAccent: "INFORMATION.",
+    },
+    finalCta: {
+      eyebrow: "GET IN TOUCH",
+      title1: "CREATE YOUR SPECIAL",
+      titleAccent: "WEDDING DAY",
+      titleRest: "WITH US.",
+      desc1: "Share your date, vision, and expectations with our team.",
+      desc2: "New Day Wedding Organizer is ready to guide you with warmth and dedicated professionalism.",
+      ctaPrimary: "CONSULT VIA WHATSAPP",
+      ctaSecondary: "VIEW PORTFOLIO",
+    },
+    footer: {
+      desc: "New Day Wedding Organizer is a Yogyakarta-based Wedding Organizer & Planner, helping couples create wedding celebrations that are beautiful, personal, and meticulously organized.",
+      location: "Yogyakarta, Indonesia",
+      navTitle: "NAVIGATION",
+      relatedTitle: "NEW DAY GALLERY",
+      galleryDesc: "Exquisite bridal attire collections for your celebration in Yogyakarta. Jl. Bugisan 335P, Yogyakarta (09.30–16.30).",
+      exploreGallery: "EXPLORE NEW DAY GALLERY",
+      socialTitle: "Yogyakarta Wedding Organizer & Planner",
+      rights: "All rights reserved.",
+      motto: "Make Your Wedding Moment Beautiful and Unforgettable",
+    },
+  },
+};
