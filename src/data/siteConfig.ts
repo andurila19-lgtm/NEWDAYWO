@@ -2,6 +2,7 @@ export const siteConfig = {
   name: "New Day Wedding Organizer",
   shortName: "New Day WO",
   tagline: "Jadikan moment pernikahanmu indah dan tak terlupakan.",
+  taglineEn: "Make your wedding moment beautiful and unforgettable.",
   description:
     "New Day Wedding Organizer merupakan Wedding Organizer dan Wedding Planner yang berbasis di Yogyakarta. New Day membantu pasangan dalam mempersiapkan dan mengoordinasikan kebutuhan pernikahan agar setiap rangkaian acara dapat berjalan lebih terarah dan lancar.",
   location: "Yogyakarta, Indonesia",
