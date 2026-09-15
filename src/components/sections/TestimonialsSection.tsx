@@ -6,7 +6,7 @@ import { siteConfig, getWhatsAppLink } from "@/data/siteConfig";
 import { Star, MessageCircle, MapPin, Clock, ExternalLink } from "lucide-react";
 
 export default function TestimonialsSection() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
 
   return (
     <section className="relative w-full bg-[#F7F3F1] text-[#0D0C0D] py-16 sm:py-24 lg:py-32 border-t border-[#B7AAA9]/20">
@@ -47,16 +47,20 @@ export default function TestimonialsSection() {
                 ))}
               </div>
               <p className="text-xs text-[#0D0C0D] font-semibold tracking-wide mt-1">
-                26 Ulasan di Google Business
+                {lang === "en" ? "26 Reviews on Google Business" : "26 Ulasan di Google Business"}
               </p>
               <p className="text-[11px] text-[#B7AAA9] mt-0.5 font-light">
-                Profil Bisnis Resmi New Day Wedding Organizer
+                {lang === "en"
+                  ? "Official Business Profile of New Day Wedding Organizer"
+                  : "Profil Bisnis Resmi New Day Wedding Organizer"}
               </p>
 
               <div className="mt-5 pt-4 border-t border-[#B7AAA9]/20 space-y-2 text-[11px] text-[#191719]/80 text-left">
                 <div className="flex items-center gap-2">
                   <Clock className="w-3.5 h-3.5 text-[#E98B98] shrink-0" />
-                  <span>{siteConfig.googleBusiness.openingHours}</span>
+                  <span>
+                    {lang === "en" ? "Open until 21.00 WIB" : siteConfig.googleBusiness.openingHours}
+                  </span>
                 </div>
                 <div className="flex items-start gap-2">
                   <MapPin className="w-3.5 h-3.5 text-[#E98B98] shrink-0 mt-0.5" />
@@ -69,25 +73,31 @@ export default function TestimonialsSection() {
             <div className="md:col-span-7 flex flex-col justify-between space-y-5">
               <div>
                 <span className="text-[9px] tracking-[0.25em] uppercase text-[#E98B98] font-bold block mb-2">
-                  PESAN BRAND KAMI
+                  {lang === "en" ? "OUR BRAND MESSAGE" : "PESAN BRAND KAMI"}
                 </span>
                 <p className="font-editorial text-xl sm:text-2xl text-[#0D0C0D] italic leading-snug">
-                  &ldquo;{siteConfig.tagline}&rdquo;
+                  &ldquo;{lang === "en" ? siteConfig.taglineEn : siteConfig.tagline}&rdquo;
                 </p>
                 <p className="mt-3 text-xs sm:text-sm text-[#191719]/80 font-light leading-relaxed">
-                  New Day bukan sekadar membantu pada hari pernikahan, tetapi menjadi partner bagi pasangan dalam mempersiapkan dan mengoordinasikan momen penting mereka agar setiap rangkaian acara berjalan terarah, indah, dan berkesan.
+                  {lang === "en"
+                    ? t.testimonials.googleNote
+                    : "New Day bukan sekadar membantu pada hari pernikahan, tetapi menjadi partner bagi pasangan dalam mempersiapkan dan mengoordinasikan momen penting mereka agar setiap rangkaian acara berjalan terarah, indah, dan berkesan."}
                 </p>
               </div>
 
               <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                 <Link
-                  href={getWhatsAppLink()}
+                  href={getWhatsAppLink(
+                    lang === "en"
+                      ? "Hello New Day Wedding Organizer, I would like to consult about wedding planning in Yogyakarta."
+                      : undefined
+                  )}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#E98B98] text-[#0D0C0D] text-[11px] font-semibold tracking-[0.18em] uppercase hover:bg-[#0D0C0D] hover:text-[#F7F3F1] transition-all shadow-md"
                 >
                   <MessageCircle className="w-4 h-4" />
-                  <span>KONSULTASI VIA WHATSAPP</span>
+                  <span>{t.testimonials.actionLabel}</span>
                 </Link>
 
                 <Link
@@ -96,7 +106,7 @@ export default function TestimonialsSection() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-1.5 px-5 py-3.5 border border-[#B7AAA9]/50 text-[#0D0C0D] text-[11px] font-medium tracking-wider uppercase hover:border-[#0D0C0D] transition-colors"
                 >
-                  <span>LIHAT DI GOOGLE</span>
+                  <span>{lang === "en" ? "VIEW ON GOOGLE" : "LIHAT DI GOOGLE"}</span>
                   <ExternalLink className="w-3.5 h-3.5 text-[#B7AAA9]" />
                 </Link>
               </div>

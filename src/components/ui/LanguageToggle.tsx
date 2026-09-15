@@ -11,29 +11,28 @@ export default function LanguageToggle({ className = "" }: LanguageToggleProps) 
 
   return (
     <div
-      className={`inline-flex items-center gap-1.5 text-[10px] tracking-[0.2em] font-medium uppercase select-none ${className}`}
+      className={`inline-flex items-center rounded-full bg-[#191719] border border-[#2A2629] p-0.5 text-[10px] tracking-[0.18em] font-medium uppercase select-none transition-all ${className}`}
       aria-label="Language selector"
     >
       <button
         type="button"
         onClick={() => setLang("id")}
-        className={`transition-colors py-0.5 px-1 focus:outline-none ${
+        className={`px-2.5 py-1 rounded-full transition-all duration-300 focus:outline-none ${
           lang === "id"
-            ? "text-[#E98B98] font-bold"
-            : "text-[#B7AAA9]/70 hover:text-[#F7F3F1]"
+            ? "bg-[#E98B98] text-[#0D0C0D] font-bold shadow-sm"
+            : "text-[#B7AAA9] hover:text-[#F7F3F1]"
         }`}
         aria-pressed={lang === "id"}
       >
         ID
       </button>
-      <span className="text-[#B7AAA9]/40 text-[9px]">|</span>
       <button
         type="button"
         onClick={() => setLang("en")}
-        className={`transition-colors py-0.5 px-1 focus:outline-none ${
+        className={`px-2.5 py-1 rounded-full transition-all duration-300 focus:outline-none ${
           lang === "en"
-            ? "text-[#E98B98] font-bold"
-            : "text-[#B7AAA9]/70 hover:text-[#F7F3F1]"
+            ? "bg-[#E98B98] text-[#0D0C0D] font-bold shadow-sm"
+            : "text-[#B7AAA9] hover:text-[#F7F3F1]"
         }`}
         aria-pressed={lang === "en"}
       >

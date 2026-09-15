@@ -42,7 +42,7 @@ export default function HeroSection() {
             <span className="text-xs font-semibold text-[#F7F3F1]">5,0</span>
           </div>
           <span className="text-[10px] sm:text-[11px] text-[#B7AAA9] font-light tracking-wide">
-            (26 Ulasan Google Business)
+            {lang === "en" ? "(26 Google Reviews)" : "(26 Ulasan Google Business)"}
           </span>
           <span className="w-1 h-1 rounded-full bg-[#E98B98]" />
           <span className="text-[10px] sm:text-[11px] text-[#E98B98] font-medium tracking-wider uppercase">
@@ -71,7 +71,11 @@ export default function HeroSection() {
         <div className="mt-7 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3.5 sm:gap-5 w-full sm:w-auto px-4 sm:px-0">
           {/* Primary CTA: Konsultasi Via WhatsApp */}
           <Link
-            href={getWhatsAppLink()}
+            href={getWhatsAppLink(
+              lang === "en"
+                ? "Hello New Day Wedding Organizer, I would like to consult about wedding planning in Yogyakarta."
+                : undefined
+            )}
             target="_blank"
             rel="noopener noreferrer"
             className="h-[48px] sm:h-[52px] inline-flex items-center justify-center gap-2.5 px-8 sm:px-10 rounded-full text-[#0D0C0D] text-[11px] sm:text-xs font-semibold tracking-[0.2em] uppercase hover:brightness-105 hover:shadow-[0_0_25px_rgba(233,139,152,0.3)] transition-all duration-300 shadow-xl group shrink-0"
@@ -94,11 +98,11 @@ export default function HeroSection() {
         {/* Secondary Links quick row */}
         <div className="mt-5 flex items-center justify-center gap-5 text-[11px] sm:text-xs tracking-wider text-[#B7AAA9]">
           <Link href="/services" className="hover:text-[#E98B98] transition-colors underline-offset-4 hover:underline">
-            Lihat Layanan
+            {lang === "en" ? "View Services" : "Lihat Layanan"}
           </Link>
           <span className="w-1 h-1 rounded-full bg-[#B7AAA9]/40" />
           <Link href="/new-day-gallery" className="hover:text-[#E98B98] transition-colors underline-offset-4 hover:underline">
-            New Day Gallery
+            {t.nav.exploreGallery}
           </Link>
         </div>
       </div>

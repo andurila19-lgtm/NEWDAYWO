@@ -43,8 +43,9 @@ export default function ServicesSection() {
         {/* Editorial Service List */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           <div className="lg:col-span-7 divide-y divide-[#2A2629]">
-            {servicesData.map((service, index) => {
+            {t.services.items.map((item, index) => {
               const isHovered = hoveredIdx === index;
+              const service = servicesData[index] || servicesData[0];
               return (
                 <div
                   key={service.id}
@@ -58,7 +59,7 @@ export default function ServicesSection() {
                           isHovered ? "text-[#E98B98]" : "text-[#B7AAA9]/60"
                         }`}
                       >
-                        {service.number}
+                        {item.number}
                       </span>
 
                       <div className="flex-1 min-w-0">
@@ -68,7 +69,7 @@ export default function ServicesSection() {
                               isHovered ? "text-[#F7F3F1]" : "text-[#F7F3F1]/85"
                             }`}
                           >
-                            {service.title}
+                            {item.title}
                           </h3>
                           <ArrowUpRight
                             className={`w-4 h-4 shrink-0 transition-all duration-300 hidden sm:block ${
@@ -77,7 +78,7 @@ export default function ServicesSection() {
                           />
                         </div>
                         <p className="mt-1.5 text-xs text-[#B7AAA9] leading-relaxed line-clamp-2 sm:line-clamp-none max-w-lg">
-                          {service.shortDesc}
+                          {item.desc}
                         </p>
                       </div>
                     </div>
@@ -111,7 +112,7 @@ export default function ServicesSection() {
                         SERVICE {service.number}
                       </span>
                       <h4 className="font-editorial text-lg text-[#F7F3F1] tracking-wider uppercase mt-1">
-                        {service.title}
+                        {t.services.items[index]?.title || service.title}
                       </h4>
                     </div>
                   </div>

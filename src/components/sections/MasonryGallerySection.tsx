@@ -37,19 +37,28 @@ export default function MasonryGallerySection() {
 
           {/* Filter Tabs - horizontally scrollable on mobile */}
           <div className="flex items-center gap-2 overflow-x-auto pb-1 -mx-1 px-1 no-scrollbar">
-            {galleryCategories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setActiveCategory(cat)}
-                className={`text-[9px] sm:text-[11px] uppercase tracking-[0.15em] sm:tracking-[0.2em] px-3 py-1.5 transition-all duration-300 whitespace-nowrap shrink-0 ${
-                  activeCategory === cat
-                    ? "bg-[#E98B98] text-[#0D0C0D] font-semibold"
-                    : "text-[#B7AAA9] hover:text-[#F7F3F1] border border-[#2A2629]"
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
+            {galleryCategories.map((cat) => {
+              const tabLabelMap: Record<GalleryCategory, string> = {
+                ALL: t.masonry.tabs.all,
+                CEREMONY: t.masonry.tabs.ceremony,
+                RECEPTION: t.masonry.tabs.reception,
+                DECORATION: t.masonry.tabs.details,
+                DETAILS: t.masonry.tabs.details,
+              };
+              return (
+                <button
+                  key={cat}
+                  onClick={() => setActiveCategory(cat)}
+                  className={`text-[9px] sm:text-[11px] uppercase tracking-[0.15em] sm:tracking-[0.2em] px-3 py-1.5 transition-all duration-300 whitespace-nowrap shrink-0 ${
+                    activeCategory === cat
+                      ? "bg-[#E98B98] text-[#0D0C0D] font-semibold"
+                      : "text-[#B7AAA9] hover:text-[#F7F3F1] border border-[#2A2629]"
+                  }`}
+                >
+                  {tabLabelMap[cat] || cat}
+                </button>
+              );
+            })}
           </div>
         </div>
 

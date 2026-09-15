@@ -33,7 +33,7 @@ export default function PackagesSection() {
 
         {/* Package Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch">
-          {packagesData.map((pkg) => (
+          {t.packagesPage.items.map((pkg) => (
             <div
               key={pkg.id}
               className="bg-[#191719] border border-[#2A2629] p-6 sm:p-8 lg:p-10 flex flex-col justify-between hover:border-[#E98B98]/60 transition-all duration-300 relative group"
@@ -60,7 +60,7 @@ export default function PackagesSection() {
 
                 <div className="pt-4 border-t border-[#2A2629]/60 space-y-2.5 mb-6">
                   <span className="text-[10px] tracking-[0.2em] uppercase text-[#F7F3F1]/80 font-semibold block">
-                    Cakupan Layanan:
+                    {t.packages.scopeTitle}
                   </span>
                   {pkg.features.slice(0, 4).map((feat, idx) => (
                     <div key={idx} className="flex items-start gap-2.5">
@@ -76,7 +76,9 @@ export default function PackagesSection() {
               <div>
                 <Link
                   href={getWhatsAppLink(
-                    `Halo New Day Wedding Organizer, saya ingin konsultasi mengenai layanan: ${pkg.title} untuk pernikahan kami di Yogyakarta.`
+                    lang === "en"
+                      ? `Hello New Day Wedding Organizer, I would like to consult regarding the package: ${pkg.title} for our wedding in Yogyakarta.`
+                      : `Halo New Day Wedding Organizer, saya ingin konsultasi mengenai layanan: ${pkg.title} untuk pernikahan kami di Yogyakarta.`
                   )}
                   target="_blank"
                   rel="noopener noreferrer"

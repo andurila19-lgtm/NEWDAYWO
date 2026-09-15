@@ -8,7 +8,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import { siteConfig, getWhatsAppLink } from "@/data/siteConfig";
 
 export default function Footer() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
 
   return (
     <footer className="bg-[#0D0C0D] border-t border-[#2A2629] text-[#F7F3F1]">
@@ -21,7 +21,7 @@ export default function Footer() {
           <div className="flex flex-col items-center">
             <BrandLogo variant="navbar" />
             <p className="text-xs text-[#E98B98] italic font-light mt-3 max-w-xs">
-              &ldquo;{siteConfig.tagline}&rdquo;
+              &ldquo;{lang === "en" ? siteConfig.taglineEn : siteConfig.tagline}&rdquo;
             </p>
           </div>
 
@@ -44,7 +44,7 @@ export default function Footer() {
             </Link>
             <span className="text-[#2A2629]">•</span>
             <Link href="/new-day-gallery" className="text-[#E98B98]/90 hover:text-[#E98B98] transition-colors">
-              Gallery
+              {t.nav.exploreGallery}
             </Link>
             <span className="text-[#2A2629]">•</span>
             <Link href="/contact" className="hover:text-[#E98B98] transition-colors">
@@ -55,7 +55,11 @@ export default function Footer() {
           {/* Minimal WhatsApp CTA */}
           <div className="w-full max-w-xs pt-1">
             <Link
-              href={getWhatsAppLink()}
+              href={getWhatsAppLink(
+                lang === "en"
+                  ? "Hello New Day Wedding Organizer, I would like to consult regarding wedding planning in Yogyakarta."
+                  : undefined
+              )}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full h-11 inline-flex items-center justify-center gap-2 rounded-full border border-[#E98B98]/40 bg-[#E98B98]/10 text-xs font-semibold tracking-[0.18em] uppercase text-[#F7F3F1] hover:bg-[#E98B98] hover:text-[#0D0C0D] transition-all"
@@ -113,7 +117,7 @@ export default function Footer() {
             <div className="lg:col-span-5 flex flex-col items-start gap-4 sm:gap-5">
               <BrandLogo variant="footer" />
               <p className="text-xs text-[#E98B98] italic font-light">
-                &ldquo;{siteConfig.tagline}&rdquo;
+                &ldquo;{lang === "en" ? siteConfig.taglineEn : siteConfig.tagline}&rdquo;
               </p>
               <p className="text-[#B7AAA9] text-xs sm:text-sm leading-relaxed max-w-md font-light">
                 {t.footer.desc}
@@ -129,11 +133,17 @@ export default function Footer() {
                 </div>
                 <div className="flex items-center gap-2.5 pt-1 text-[11px]">
                   <Clock className="w-3.5 h-3.5 text-[#E98B98] shrink-0" />
-                  <span>{siteConfig.googleBusiness.openingHours}</span>
+                  <span>
+                    {lang === "en" ? "Open until 21.00 WIB" : siteConfig.googleBusiness.openingHours}
+                  </span>
                 </div>
                 <div className="flex items-center gap-2.5 text-[11px]">
                   <Star className="w-3.5 h-3.5 fill-[#E98B98] text-[#E98B98] shrink-0" />
-                  <span>Rating Google Business: 5,0 (26 Ulasan)</span>
+                  <span>
+                    {lang === "en"
+                      ? "Google Business Rating: 5.0 (26 Reviews)"
+                      : "Rating Google Business: 5,0 (26 Ulasan)"}
+                  </span>
                 </div>
               </div>
             </div>
@@ -214,7 +224,7 @@ export default function Footer() {
                 </p>
               </div>
               <p className="text-xs text-[#B7AAA9] leading-relaxed">
-                {siteConfig.galleryInstagram.description}
+                {t.footer.galleryDesc}
               </p>
               <div className="text-[11px] text-[#B7AAA9] space-y-1 pt-1 border-t border-[#2A2629]/50">
                 <p className="flex items-center gap-2">
@@ -223,7 +233,9 @@ export default function Footer() {
                 </p>
                 <p className="flex items-center gap-2">
                   <Clock className="w-3 h-3 text-[#E98B98]" />
-                  <span>Jam: {siteConfig.galleryInstagram.openingHours}</span>
+                  <span>
+                    {lang === "en" ? "Hours: 09.30–16.30 WIB" : "Jam: 09.30–16.30 WIB"}
+                  </span>
                 </p>
               </div>
               <div className="pt-2 flex items-center justify-between">
@@ -259,7 +271,11 @@ export default function Footer() {
                 <span>{siteConfig.instagram.handle}</span>
               </Link>
               <Link
-                href={getWhatsAppLink()}
+                href={getWhatsAppLink(
+                  lang === "en"
+                    ? "Hello New Day Wedding Organizer, I would like to consult regarding wedding planning in Yogyakarta."
+                    : undefined
+                )}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-xs text-[#B7AAA9] hover:text-[#E98B98] transition-colors tracking-wider"
@@ -270,7 +286,7 @@ export default function Footer() {
             </div>
 
             <div className="text-[11px] sm:text-xs text-[#B7AAA9] tracking-wider">
-              Yogyakarta Wedding Organizer &amp; Wedding Planner
+              {t.footer.socialTitle}
             </div>
           </div>
 
@@ -278,7 +294,7 @@ export default function Footer() {
           <div className="pt-6 sm:pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-[#B7AAA9]/70 font-light">
             <p>© 2026 New Day Wedding Organizer. {t.footer.rights}</p>
             <p className="tracking-widest uppercase text-[9px] sm:text-[10px] text-[#E98B98]">
-              {siteConfig.tagline}
+              {lang === "en" ? siteConfig.taglineEn : siteConfig.tagline}
             </p>
           </div>
         </div>

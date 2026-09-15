@@ -103,7 +103,7 @@ export default function NewDayGalleryTeaser() {
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pt-5 sm:pt-6 border-t border-[#B7AAA9]/30 text-xs text-[#191719]/80 font-light">
           <div className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-[#E98B98]" />
-            <span className="text-[11px] sm:text-xs">Part of @newday_weddingorganizer ecosystem</span>
+            <span className="text-[11px] sm:text-xs">{t.galleryTeaser.ecosystem}</span>
           </div>
           <Link
             href={siteConfig.galleryInstagram.url}
